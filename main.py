@@ -171,8 +171,8 @@ async def upload_pdf(file: UploadFile = File(...)):
     
 @app.get("/")
 async def get_root():
-    return FileResponse("frontend/dist/index.html")
-app.mount("/", StaticFiles(directory="frontend/dist", html=True))
+    return FileResponse("dist/index.html")
+app.mount("/", StaticFiles(directory="dist", html=True))
 
 
 
